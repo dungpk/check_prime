@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[*Bài tập] Thực hành vòng lặp while</title>
+</head>
+<hr>
+<body>
+
+<script>
+    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: ")); //10
+    let primreAmount = 0 ;
+    let primreSequence = 2;
+    let primre = 2;
+    while(primreAmount < number)
+    {
+        let checkPrime = 0;
+        while(primreSequence < primre)
+        {
+            if(primre%primreSequence == 0)
+            {
+                checkPrime ++;
+                break;
+            }
+            primreSequence++;
+        }
+        if(checkPrime == 0)
+        {
+            document.write(primre +' ') ;
+            primreAmount++;
+        }
+        // checkPrime = 0;
+        primre++;
+        primreSequence =2;
+    }
+
+</script>
+</body>
+</html>
